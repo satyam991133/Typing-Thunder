@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nosifer&family=Oswald:wght@500&family=Poppins&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Thunder Typing</title>
+  </head>
+  <body>
+    <nav class="navbar show">
+      <div class="nav-content">
+        <div class="difficulty">
+          <p>Difficulty</p>
+          <select>
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="btn nav-btn" id="scores-btn">
+            <i class="fas fa-list-ol"></i>
+          </button>
+          <button class="btn nav-btn" id="rules-btn">
+            <i class="fas fa-info"></i>
+          </button>
+        </div>
+      </div>
+      <div class="navbar-toggle">
+        <i class="fas fa-chevron-up"></i>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="game-card">
+        <div class="game-head">
+          <h1>Typing Thunder</h1>
+        </div>
+        <div class="game-body">
+          <div class="time-score">
+            <div class="time-left"></div>
+            <div class="score"></div>
+          </div>
+          <p>Type the following word</p>
+          <p class="word"></p>
+          <input
+            type="text"
+            class="word-input"
+            placeholder="Type the word here..."
+            disabled
+          />
+          <button class="btn game-btn">Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules-overlay">
+      <div class="rules-card">
+        <div class="rules-head">
+          <h2>Rules</h2>
+          <button class="close-btn" id="close-rules">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="rules-body">
+          <p>The timer starts at 10 seconds</p>
+          <p>
+            Type the word in input box, on entering correct word time gets
+            updated according to difficulty level and score increases by 1
+          </p>
+          <p>Time Update:</p>
+          <p>Easy: 3 seconds</p>
+          <p>Medium: 2 seconds</p>
+          <p>Hard: 1 second</p>
+          <p>Also the range of diversity of words increases with difficulty</p>
+          <p>Aim is to score as high as possible. GOOD LUCK!!!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scores-overlay">
+      <div class="scores-card">
+        <div class="scores-head">
+          <h2>High Scores</h2>
+          <button class="close-btn" id="close-scores">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="scores-body">
+          <div class="score-item score-item-head">Difficulty</div>
+          <div class="score-item score-item-head">Score</div>
+          <div class="score-item score-item-head">Date</div>
+          <div class="score-item">Easy</div>
+          <div class="score-item">0</div>
+          <div class="score-item">-</div>
+          <div class="score-item">Medium</div>
+          <div class="score-item">0</div>
+          <div class="score-item">-</div>
+          <div class="score-item">Hard</div>
+          <div class="score-item">0</div>
+          <div class="score-item">-</div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
